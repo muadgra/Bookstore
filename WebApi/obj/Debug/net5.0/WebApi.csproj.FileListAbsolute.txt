@@ -11,7 +11,6 @@ C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.AssemblyInfoInputs.cache
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.AssemblyInfo.cs
@@ -32,3 +31,4 @@ C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrame
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.csprojAssemblyReference.cache

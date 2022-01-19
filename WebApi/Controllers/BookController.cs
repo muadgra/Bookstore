@@ -5,6 +5,7 @@ using System.Linq;
 using WebApi.BookOperations.GetBooks;
 using WebApi.DbOperations;
 using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.GetBookById;
 using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 
 namespace WebApi.AddControllers{
@@ -26,10 +27,12 @@ namespace WebApi.AddControllers{
 
         //Get id from route.
         [HttpGet("{id}")]
-        public Book getByBookId(int id)
+        public IActionResult getByBookId(int id)
         {
-            var book = _context.Books.Where(book => book.Id == id).SingleOrDefault();
-            return book;
+            GetBookQuery query = new GetBookQuery(_context);
+            var book = query.HandleBook(id);
+     
+            return Ok(book);
         }
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook){
