@@ -31,4 +31,10 @@ C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrame
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.csprojAssemblyReference.cache
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mertcan\Desktop\Bookstore\WebApi\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache

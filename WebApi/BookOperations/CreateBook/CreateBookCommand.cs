@@ -4,13 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
-
+using AutoMapper;
 namespace WebApi.BookOperations.CreateBook{
     public class CreateBookCommand{
         public CreateBookModel Model {get; set;}
+        private readonly IMapper _mapper;
         private readonly BookStoreDbContext _context;
-        public CreateBookCommand(BookStoreDbContext context){
+        public CreateBookCommand(BookStoreDbContext context, IMapper mapper){
             _context = context;
+            _mapper = mapper;
         }
         public void Handle(){
             var book = _context.Books.SingleOrDefault(x => x.Title == Model.Title);
@@ -18,11 +20,11 @@ namespace WebApi.BookOperations.CreateBook{
             if(book is not null){
                 throw new InvalidOperationException("Kitap mevcut.");
             }
-            book = new Book();
-            book.Title = Model.Title;
-            book.PublishDate = Model.PublishDate;
-            book.PageCount = Model.PageCount;
-            book.GenreId = Model.GenreId;
+            book = _mapper.Map<Book>(Model); //new Book();
+            //book.Title = Model.Title;
+            //book.PublishDate = Model.PublishDate;
+            //book.PageCount = Model.PageCount;
+            //book.GenreId = Model.GenreId;
             _context.Books.Add(book);
             _context.SaveChanges();
             
