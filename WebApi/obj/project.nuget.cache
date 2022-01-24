@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GlsVacQ5VOf5+jH2+J+IxwA1g+ESvSDosBSmK5OzU3zgL64SCC2GuGqeNOkZx4hE+/2AL7fysfhH3fxjb1f5Tg==",
+  "dgSpecHash": "BG5Gixz8qxy6zcCb+5AqBG3vBF5GcFHpfwQG0pDxwuUTlsnFq4toVcawv9j3rQo95WTM2mWStjbSHOJ4NysR3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mertcan\\Desktop\\Bookstore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Mertcan\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",

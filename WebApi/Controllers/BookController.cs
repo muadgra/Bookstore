@@ -3,6 +3,7 @@ using System;
 using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
+using FluentValidation.Results;
 using WebApi.BookOperations.GetBooks;
 using WebApi.DbOperations;
 using WebApi.BookOperations.CreateBook;
@@ -10,6 +11,9 @@ using WebApi.BookOperations.UpdateBook;
 using WebApi.BookOperations.GetBookById;
 using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
+using WebApi.BookOperations.DeleteBook;
+using FluentValidation;
+
 namespace WebApi.AddControllers{
     [ApiController]
     [Route("[controller]s")]
@@ -45,6 +49,9 @@ namespace WebApi.AddControllers{
             
             try{
                 command.Model = newBook;
+                CreateBookCommandValidator validator = new CreateBookCommandValidator();
+                
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch(Exception ex){
@@ -69,13 +76,17 @@ namespace WebApi.AddControllers{
             return Ok();
         }
         [HttpDelete("{id}")]
-        public IActionResult DeleteBook([FromRoute] int id){
-            var book = _context.Books.SingleOrDefault(x => x.Id == id);
-            if(book == null){
-                return BadRequest();
+        public IActionResult DeleteBook(int id){
+            try{
+                DeleteBookCommand command = new DeleteBookCommand(_context);
+                command.BookId = id;
+                DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
+                validator.ValidateAndThrow(command);
+                command.Handle();
             }
-            _context.Books.Remove(book);
-            _context.SaveChanges();
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
             return Ok();
         }
 
