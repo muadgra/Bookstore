@@ -37,9 +37,17 @@ namespace WebApi.AddControllers{
         [HttpGet("{id}")]
         public IActionResult getByBookId(int id)
         {
-            GetBookQuery query = new GetBookQuery(_context, _mapper);
-            query.BookId = id;
-            var book = query.HandleBook();
+            BookViewModel book;
+            try{
+                GetBookQuery query = new GetBookQuery(_context, _mapper);
+                query.BookId = id;
+                GetBookQueryValidator validator = new GetBookQueryValidator();
+                validator.ValidateAndThrow(query);
+                book = query.HandleBook();
+            }
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
             
             return Ok(book);
         }
@@ -67,6 +75,8 @@ namespace WebApi.AddControllers{
             try{
                 command.BookId = id;
                 command.Model = updatedBook;
+                UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
+                validator.ValidateAndThrow(command);
                 command.Update();
             }
             catch(Exception ex){
