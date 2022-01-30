@@ -2,11 +2,12 @@ using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
-
-namespace WebApi.BookOperations.GetBookById{
+using WebApi.Entities;
+namespace WebApi.Application.BookOperations.Queries.GetBookById{
     public class GetBookQuery{
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
@@ -17,7 +18,7 @@ namespace WebApi.BookOperations.GetBookById{
         }
 
         public BookViewModel HandleBook(){
-            var searchedBook = _context.Books.Where(book => book.Id == BookId).SingleOrDefault();
+            var searchedBook = _context.Books.Include(x=> x.Genre).Where(book => book.Id == BookId).SingleOrDefault();
             if(searchedBook is null){
                 throw new InvalidOperationException("Kitap bulunamadi.");
             }

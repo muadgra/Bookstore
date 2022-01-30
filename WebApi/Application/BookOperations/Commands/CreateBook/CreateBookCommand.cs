@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
 using AutoMapper;
-namespace WebApi.BookOperations.CreateBook{
+namespace WebApi.Application.BookOperations.Commands.CreateBook{
     public class CreateBookCommand{
         public CreateBookModel Model {get; set;}
         private readonly IMapper _mapper;

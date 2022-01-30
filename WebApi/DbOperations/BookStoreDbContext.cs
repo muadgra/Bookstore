@@ -1,4 +1,4 @@
-
+using WebApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebApi.DbOperations
@@ -8,6 +8,7 @@ namespace WebApi.DbOperations
             
         }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Genre> Genres {get; set;}
 
     }
 }

@@ -4,17 +4,17 @@ using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
-using WebApi.BookOperations.GetBooks;
+using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.DbOperations;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.UpdateBook;
-using WebApi.BookOperations.GetBookById;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
-using WebApi.BookOperations.DeleteBook;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using WebApi.Application.BookOperations.Commands.UpdateBook;
+using WebApi.Application.BookOperations.Queries.GetBookById;
+using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
+using static WebApi.Application.BookOperations.Commands.UpdateBook.UpdateBookCommand;
+using WebApi.Application.BookOperations.Commands.DeleteBook;
 using FluentValidation;
 
-namespace WebApi.AddControllers{
+namespace WebApi.Controllers{
     [ApiController]
     [Route("[controller]s")]
     public class BookController : ControllerBase

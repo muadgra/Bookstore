@@ -5,8 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
-
-namespace WebApi.BookOperations.GetBooks
+using Microsoft.EntityFrameworkCore;
+namespace WebApi.Application.BookOperations.Queries.GetBooks
 {
     public class GetBooksQuery
     {
@@ -20,19 +20,9 @@ namespace WebApi.BookOperations.GetBooks
         //UI'a dönecek veri setini ViewModel ile koruyarak döndüreceğiz.
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dbContext.Books.OrderBy(x => x.Id).ToList<Book>();
+            var bookList = _dbContext.Books.Include(x=> x.Genre).OrderBy(x => x.Id).ToList<Book>();
             List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);
-                //new List<BooksViewModel>();
-            //foreach(var item in bookList)
-            //{
-            //    vm.Add(new BooksViewModel()
-            //    {
-            //        Title = item.Title,
-            //        PageCount = item.PageCount,
-            //        PublishDate = item.PublishDate.Date.ToString("dd/MM/yyy"),
-            //        Genre = ((GenreEnum) item.GenreId).ToString(),
-            //    });
-            //}
+                
             return vm;
         }
    

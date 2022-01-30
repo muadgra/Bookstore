@@ -1,6 +1,6 @@
 using FluentValidation;
 using System;
-namespace WebApi.BookOperations.CreateBook{
+namespace WebApi.Application.BookOperations.Commands.CreateBook{
     public class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>{
         public CreateBookCommandValidator(){
             RuleFor(command => command.Model.GenreId).GreaterThan(0);

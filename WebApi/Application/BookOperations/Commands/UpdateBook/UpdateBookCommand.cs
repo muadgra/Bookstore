@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
 
-namespace WebApi.BookOperations.UpdateBook{
+namespace WebApi.Application.BookOperations.Commands.UpdateBook{
     public class UpdateBookCommand{
         private readonly BookStoreDbContext _context;
         public UpdatedBook Model {get; set;}
