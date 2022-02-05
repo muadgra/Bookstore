@@ -9,10 +9,10 @@ using WebApi.DbOperations;
 using WebApi.Entities;
 namespace WebApi.Application.BookOperations.Queries.GetBookById{
     public class GetBookQuery{
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public int BookId {get; set;}
-        public GetBookQuery(BookStoreDbContext context, IMapper mapper){
+        public GetBookQuery(IBookStoreDbContext context, IMapper mapper){
             _context = context;
             _mapper = mapper;
         }
