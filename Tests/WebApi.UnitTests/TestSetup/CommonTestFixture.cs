@@ -1,0 +1,22 @@
+using WebApi.DbOperations;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using WebApi.Common;
+namespace TestSetup{
+    public class CommonTestFixture{
+        public BookStoreDbContext Context {get; set;}
+        public IMapper Mapper {get; set;}
+        public CommonTestFixture(){
+            var options = new DbContextOptionsBuilder<BookStoreDbContext>().UseInMemoryDatabase(databaseName : "BookstoreTestDB"
+            ).Options;
+            Context = new BookStoreDbContext(options);
+            Context.Database.EnsureCreated();
+            Context.AddBooks();
+            Context.AddGenres();
+            Context.SaveChanges();
+
+            Mapper = new MapperConfiguration(cfg => {cfg.AddProfile<MappingProfile>();}).CreateMapper();
+            
+        }
+    }
+}

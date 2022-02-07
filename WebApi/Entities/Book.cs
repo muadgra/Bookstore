@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using WebApi.Entities;
-namespace WebApi {
+namespace WebApi.Entities {
     public class Book {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id {get; set;}

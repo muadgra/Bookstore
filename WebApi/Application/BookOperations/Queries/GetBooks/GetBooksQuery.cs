@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
 using Microsoft.EntityFrameworkCore;
+using WebApi.Entities;
 namespace WebApi.Application.BookOperations.Queries.GetBooks
 {
     public class GetBooksQuery

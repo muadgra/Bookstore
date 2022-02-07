@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using WebApi.Common;
 using WebApi.DbOperations;
 using AutoMapper;
+using WebApi.Entities;
 namespace WebApi.Application.BookOperations.Commands.CreateBook{
     public class CreateBookCommand{
         public CreateBookModel Model {get; set;}
